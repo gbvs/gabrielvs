@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example</title>
-</head>
-<body>
- <h2>Welcome to the cours 2</h2> 
- <?php
- $first_name = "John";
- $last_name = "Doe";
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php
+        //First create the array
+        $fruits = array("apple", "banana", "orange");
 
- $name = $first_name . " " . $last_name;
- 
- $age = 34;
- 
+        //Modify the array
+        $fruits[1] = "pear";
+        $fruits[3] = "banana";
 
- echo "Your name is $name <br>";
+        echo("<h1>These are my fruits</h1>");
+        echo($fruits[0] . "<br>");
+        echo($fruits[1] . "<br>");
+        echo($fruits[2] . "<br>");
+        echo($fruits[3] . "<br>");
+        ?>
 
- echo "Your age is $age";
- 
- ?>
-</body>
+
+        <h1>And now the fruits as a list</h1>
+
+        <ol>
+            <?php
+            /*
+              Now we print out ony the list items
+              We startet the list on HTML
+             */
+            echo("<li> $fruits[0] </li>");
+            echo("<li> $fruits[1] </li>");
+            echo("<li> $fruits[2] </li>");
+            echo("<li> $fruits[3] </li>");
+            ?>
+        </ol>
+    </body>
 </html>
